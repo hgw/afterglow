@@ -36,6 +36,6 @@
 	},
 
 
-  "homepage_url": "",
+  "homepage_url": "http://www.transmediale.de/",
 	"content_security_policy":"script-src 'self'; object-src 'self'"
 }
