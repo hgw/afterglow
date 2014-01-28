@@ -28,6 +28,11 @@ $(function() {
     "z-index"   : 100000
   }
 
+
+//  hide_cursor_css = {
+//    "cursor": url(transparent.png), default;
+//  }
+
   cX = 0;
   cY = 0;
   tarX = 0;
