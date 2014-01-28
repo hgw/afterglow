@@ -3,17 +3,17 @@
 
   "manifest_version": 2,
 
-	"name":"☞ きみ",
+	"name":"real browser",
 
-  "description":"きみのための機能拡張",
+  "description":"",
 
 
-	"version":"1.1",
+	"version":"1.0",
 
 
 	"browser_action": {
 		"default_icon":"img/icon.png",
-		"default_title":"☞ きみにする"
+		"default_title":"get real"
 	},
 
 
