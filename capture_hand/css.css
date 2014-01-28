@@ -1,0 +1,8 @@
+html, body {
+	margin: 0;
+}
+#real_cursor {
+	position:absolute;
+	width: 640px;
+	height: 360px;
+}
