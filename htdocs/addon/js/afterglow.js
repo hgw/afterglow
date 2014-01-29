@@ -13,7 +13,7 @@ $(function() {
     "background-size": "cover",
     "z-index"   : 100000,
     "transform-origin": "0 0",
-    "transform": "rotate(-90deg)",
+    "transform": "rotate(-90deg)"
   };
 
 
