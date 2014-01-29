@@ -5,7 +5,8 @@ $(function() {
     "width"     : 640,
     "height"    : 480,
     "background-size": "cover",
-    "z-index"   : 100000
+    "z-index"   : 100000,
+    "transform": "rotate(-90deg)"
   };
 
   hide_cursor_css = {
@@ -17,48 +18,29 @@ $(function() {
   tarX = 0;
   tarY = 0;
   count = 0;
-  count2 = 1;
   default_timer = 0;
-  $cursor = $("<div id='real_cursor'></div>");
-  $cursor2 = $("<div id='real_cursor2'></div>");
+  $cursor = $("<img id='real_cursor'>");
   $cursor.css(custom_css);
-  $cursor2.css(custom_css);
   $("body").append($cursor);
-  $("body").append($cursor2);
   $real_cursor = $("#real_cursor");
-  $real_cursor2 = $("#real_cursor2");
 
 
-  renderingLayer1 = true;
 
   var renderCursor = function(){
     var rand = new Date().getTime();
 
-    if(renderingLayer1){
-      $real_cursor.css({
-        "background-image":"url('http://afterglow.localhost/finger-storage/m0.png?rand="+rand+"')"
-      });
-    }else{
-      $real_cursor2.css({
-        "background-image":"url('http://afterglow.localhost/finger-storage/m1.png?rand="+rand+"')"
-      });
-    }
+//    $real_cursor.css({
+//      "background-image":"url('http://afterglow.localhost/finger-storage/m"+ (count%2) +".png?rand="+rand+"')"
+//    });
+    $real_cursor.attr("src", "http://afterglow.localhost/finger-storage/m"+ (count%2) +".png?rand="+rand);
 
-    renderingLayer1 = !renderingLayer1;
-
-//    count +=2;
-//    count2 +=2;
-//    if(count > 10){
-//      count = 0;
-//    }
-//    if(count2 > 10){
-//      count2 = 1;
-//    }
 
     setTimeout(function(){
       renderCursor();
-    } , 1000/20);
+    } , 1000/1);
 
+
+    count++
   };
 
 
@@ -68,13 +50,7 @@ $(function() {
     if($real_cursor){
       $real_cursor.css({
         top   : tarY + 10,
-        left  : tarX - 60
-      })
-    }
-    if($real_cursor2){
-      $real_cursor2.css({
-        top   : tarY + 10,
-        left  : tarX - 60
+        left  : tarX - 320
       })
     }
   });

@@ -10,14 +10,15 @@ color[] cs1 = new color[w*h];
 color[] cs2 = new color[w*h];
 int pcount = 0;
 
-int spot = 212;
-int Xoffset = 20;
-int Yoffset = 0;
+int spot = 224;
+int Xoffset = 0;
+int Yoffset = -20;
 
+int allpixels = 0;
 
 void setup()
 {
-  frameRate(20); 
+  frameRate(30); 
   context = new SimpleOpenNI(this);
   // enable depthMap generation 
   context.enableDepth();
@@ -27,6 +28,9 @@ void setup()
   size(w, h); 
   smooth();
   //print(context.rgbHeight());
+
+  allpixels = w*h;
+
 }
 
 void draw()
@@ -40,31 +44,30 @@ void draw()
   context.update();
 
   // draw depthImageMap
-  context.depthImage().filter(BLUR,2);
+  context.depthImage().filter(BLUR,1);
   alphaG.image(context.depthImage(), 0, 0);
   alphaG.loadPixels();
   // draw camera
-  for (int i = 0; i < w*h; i++) {
+  for (int i = 0; i < allpixels; i++) {
     cs1[i] = alphaG.pixels[i];
   }
 
-  alphaG.image(context.rgbImage(), 0+Xoffset, 0+Yoffset);
+  alphaG.image(context.rgbImage(), Xoffset, Yoffset);
   alphaG.loadPixels();
   cs2 = alphaG.pixels;
 
-  for (int i = 0; i < w*h; i++) {
+  for (int i = 0; i < allpixels; i++) {
     cs2[i] = alphaG.pixels[i];
   }
 
-
-  for (int i=0;i<w*h;i++) {
+  for (int i=0;i<allpixels;i++) {
     float Red=red(cs1[i]);
     if (Red < spot) {
       cs2[i] = color(0, 0, 0, 0);
     }
   }
 
-  for (int i = 0; i < w*h; i++) {
+  for (int i = 0; i <allpixels; i++) {
     alphaG.pixels[i] = cs2[i];
   }
 
@@ -73,10 +76,7 @@ void draw()
 
   image(alphaG, 0, 0);
 
-  alphaG.save("../htdocs/finger-storage/m" + pcount +".png");
+  alphaG.save("../htdocs/finger-storage/m"+(pcount%2)+".png");
   pcount++;
-  if (pcount >= 2) {
-    pcount = 0;
-  }
 }
 

@@ -1,0 +1,62 @@
+
+/*
+YUI 3.14.1 (build 63049cb)
+Copyright 2013 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+body{
+  -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+  font-size: 100px;
+  cursor: default;
+  text-align: center;
+  background-image: url("img/stone_texture205.jpg");
+  background-size: contain;
+}
+
+.frame{
+  border:20px #000 solid;
+  padding:20px;
+}
+
+
+body.font-0{
+  font-family: helvetica, arial;
+}
+
+body.font-1{
+  font-family: "Times New Roman" Times;
+}
+
+body.font-2{
+  font-family: "Apple SD Gothic Neo", AppleGothic, "Hiragino Kaku Gothic Pro", "Segoe UI", Meiryo, "Trebuchet MS", AppleGothic, sans-serif;
+}
+
+body.font-3{
+  font-family: "Courier New", Courier, monospace;
+}
+
+
+
+body.color-0{
+  /*background: #2ecc71;*/
+  /*background: #00ff00;*/
+
+}
+
+body.color-1{
+  /*background: #0000ff;*/
+
+}
+body.color-2{
+  /*background: #ff0000;*/
+
+}
+
+body.color-3{
+  /*background: #ffff00;*/
+
+}
