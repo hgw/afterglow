@@ -1,21 +1,19 @@
 
 {
-
   "manifest_version": 2,
-
 	"name":"real browser",
-
   "description":"",
-
-
 	"version":"1.0",
 
 
-	"browser_action": {
-		"default_icon":"img/icon.png",
-		"default_title":"get real"
-	},
 
+  "content_scripts": [
+    {
+      "matches": ["https://*/*","http://*/*"],
+      "js": ["js/libs/jquery.js", "js/afterglow.js"],
+      "run_at":"document_idle"
+    }
+  ],
 
   "icons": {
     "48": "img/icon48.png",
