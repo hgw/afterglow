@@ -13,50 +13,19 @@ body{
   font-size: 100px;
   cursor: default;
   text-align: center;
-  background-image: url("img/stone_texture205.jpg");
-  background-size: contain;
 }
 
 .frame{
-  border:20px #000 solid;
-  padding:20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-
-body.font-0{
-  font-family: helvetica, arial;
+.frame img{
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50%;
 }
-
-body.font-1{
-  font-family: "Times New Roman" Times;
-}
-
-body.font-2{
-  font-family: "Apple SD Gothic Neo", AppleGothic, "Hiragino Kaku Gothic Pro", "Segoe UI", Meiryo, "Trebuchet MS", AppleGothic, sans-serif;
-}
-
-body.font-3{
-  font-family: "Courier New", Courier, monospace;
-}
-
-
-
-body.color-0{
-  /*background: #2ecc71;*/
-  /*background: #00ff00;*/
-
-}
-
-body.color-1{
-  /*background: #0000ff;*/
-
-}
-body.color-2{
-  /*background: #ff0000;*/
-
-}
-
-body.color-3{
-  /*background: #ffff00;*/
-
+.frame img:first-child{
+  margin-top: 20%;
 }
