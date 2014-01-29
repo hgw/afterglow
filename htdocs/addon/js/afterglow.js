@@ -13,7 +13,7 @@ $(function() {
     "background-size": "cover",
     "z-index"   : 100000,
     "transform-origin": "0 0",
-    "transform": "rotate(-90deg)"
+    "transform": "rotate(90deg)"
   };
 
 
@@ -52,8 +52,8 @@ $(function() {
 
     if($real_cursor){
       $real_cursor.css({
-        top   : event.pageY + (pictSize.width+10),    //  差分を引く
-        left  : event.pageX - (pictSize.height*0.5)
+        top   : event.pageY + 10,//- (pictSize.width+10),    //  差分を引く
+        left  : event.pageX + (pictSize.height*0.5)
       })
     }
   });
