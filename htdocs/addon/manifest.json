@@ -4,6 +4,8 @@
 	"name":"Human Cursor",
   "description":"",
 	"version":"1.0",
+  "homepage_url": "http://www.transmediale.de/",
+  "content_security_policy":"script-src 'self'; object-src 'self'",
 
 
 
@@ -15,10 +17,13 @@
     }
   ],
 
+
+
   "browser_action": {
     "default_icon":"img/icon.png",
     "default_title":"Human Cursor"
   },
+
 
 
   "icons": {
@@ -27,9 +32,11 @@
   },
 
 
+
 	"permissions" : [
 		"tabs", "https://*/*","http://*/*"
 	],
+
 
 
   "background": {
@@ -37,9 +44,5 @@
       "js/libs/jquery.js",
       "js/background.js"
     ]
-	},
-
-
-  "homepage_url": "http://www.transmediale.de/",
-	"content_security_policy":"script-src 'self'; object-src 'self'"
+	}
 }
