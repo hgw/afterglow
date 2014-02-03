@@ -13,8 +13,8 @@ int pcount = 0;
 int spot = 224;
 int Xoffset = 0;
 int Yoffset = -20;
-
 int allpixels = 0;
+String pathToSave = "../htdocs/finger-storage";
 
 void setup()
 {
@@ -47,6 +47,7 @@ void draw()
   context.depthImage().filter(BLUR,1);
   alphaG.image(context.depthImage(), 0, 0);
   alphaG.loadPixels();
+
   // draw camera
   for (int i = 0; i < allpixels; i++) {
     cs1[i] = alphaG.pixels[i];
@@ -73,10 +74,8 @@ void draw()
 
   alphaG.updatePixels();
   alphaG.endDraw();
-
   image(alphaG, 0, 0);
-
-  alphaG.save("../htdocs/finger-storage/m"+(pcount%2)+".png");
+  alphaG.save(pathToSave+"/m"+(pcount%2)+".png");
   pcount++;
 }
 
